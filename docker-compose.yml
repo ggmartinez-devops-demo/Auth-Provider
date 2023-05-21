@@ -1,0 +1,19 @@
+version: "3"
+services:
+  api:
+    image: ggmartinez/laravel:8
+    tty: true
+    restart: unless-stopped
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./:/app
+  db:
+    image: mysql:8
+    tty: true 
+    restart: unless-stopped
+    volumes:
+      - ./mysql:/var/lib/mysql 
+    environment:
+      - "MYSQL_ROOT_PASSWORD=1234"
+      - "MYSQL_DATABASE=laravel"
