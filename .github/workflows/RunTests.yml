@@ -15,7 +15,7 @@ jobs:
     env:
       DB_HOST: mysql
     container:
-      image: ggmartinez/laravel:8-Xdebug
+      image: ggmartinez/laravel:8-php8-Xdebug
 
     steps:
       - uses: actions/checkout@v1
