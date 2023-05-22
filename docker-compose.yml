@@ -1,7 +1,7 @@
 version: "3"
 services:
   api:
-    image: ggmartinez/laravel:8
+    image: ggmartinez/laravel:8-php8-Xdebug
     tty: true
     restart: unless-stopped
     ports:
